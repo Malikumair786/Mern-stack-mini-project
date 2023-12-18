@@ -1,19 +1,10 @@
 version: '3'
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  backend:
+    image: malikumair096/mern-stack-mini-project-backend:latest
+    ports:
+      - "3001:3001"
+  frontend:
+    image: malikumair096/mern-stack-mini-project-frontend:latest
     ports:
       - "3000:3000"
-    depends_on:
-      - mongo
-  mongo:
-    image: mongo
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongodata:/data/db
-
-volumes:
-  mongodata:
