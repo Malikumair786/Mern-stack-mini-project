@@ -7,10 +7,10 @@ FROM node:14
 WORKDIR /app/frontend
 
 # Copy package.json to the working directory
-COPY frontend/package.json ./
+COPY frontend/package.json ./frontend
 
 # Copy package-lock.json to the working directory
-COPY frontend/package-lock.json ./
+COPY frontend/package-lock.json ./frontend
 
 # Install frontend dependencies
 RUN npm install
