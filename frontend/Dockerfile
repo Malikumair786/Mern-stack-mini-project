@@ -6,8 +6,11 @@ FROM node:14
 # Set the working directory for the frontend
 WORKDIR /app/frontend
 
-# Copy package.json and package-lock.json to the working directory
-COPY frontend/package*.json ./
+# Copy package.json to the working directory
+COPY frontend/package.json ./
+
+# Copy package-lock.json to the working directory
+COPY frontend/package-lock.json ./
 
 # Install frontend dependencies
 RUN npm install
