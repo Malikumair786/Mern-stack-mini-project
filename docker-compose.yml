@@ -3,7 +3,7 @@ services:
   backend:
     image: malikumair096/mern-stack-mini-project-backend:latest
     ports:
-      - "3001:3001"
+      - "5001:5001"
   frontend:
     image: malikumair096/mern-stack-mini-project-frontend:latest
     ports:
